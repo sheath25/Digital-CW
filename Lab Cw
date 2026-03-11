@@ -1,0 +1,369 @@
+Laboratory Logbook Module: 
+
+Electrical and Electronic Principles and Devices (EETSE)
+
+ Module Code: 55-410084 
+
+Student Name: Sinead Heath
+
+ID Number:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+Experiment 1: Logic Gates Investigation	3
+AND	4
+OR	5
+NOT	6
+NOR	7
+NAND	8
+XOR	9
+3 INPUT NAND	9
+Discussion	10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Experiment 1: Logic Gates Investigation
+AND
+
+
+
+
+
+
+
+
+
+
+A	B	OUTPUT
+0	0	0
+0	1	0
+1	0	0
+1	1	1
+
+
+
+
+OR
+ 
+A	B	OUTPUT
+0	0	0
+0	1	1
+1	0	1
+1	1	1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+NOT
+ 
+INPUT	OUTPUT
+0	1
+1	0
+
+
+
+
+
+
+
+
+
+NOR 
+A	B	OUTPUT
+0	0	1
+0	1	0
+1	0	0
+1	1	0
+
+
+
+
+
+
+
+
+
+
+
+
+NAND
+ 
+A	B	OUTPUT
+0	0	1
+0	1	1
+1	0	1
+1	1	0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+XOR
+
+
+
+
+A	B	OUTPUT
+0	0	0
+0	1	1
+1	0	1
+1	1	0
+
+3 INPUT NAND
+
+A	B	C	OUTPUT
+0	0	0	1
+0	0	1	1
+0	1	0	1
+0	1	1	1
+1	0	0	1
+1	0	1	1
+1	1	0	1
+1	1	1	0
+
+
+
+
+
+
+
+Discussion
+I encountered some issues when first assembling the circuits, struggling to get power, however this was quickly resolved when shown a demo on how to set up the equipment. 
+I questioned the logic in the gate when trying to prove the logic by collecting the evidence through the truth table, as on an XOR gate, no LEDs were lit as I switched the inputs. The truth table was confirmed correct when we changed the faulty component, as I got an output when only A or B was true, exclusively. 
+When investigating if a floating input makes a difference to the output. I found that it didn’t make a difference, because it seems like it doesn’t change anything, however the input is actually invalid. There could be external noise picked up on the input, which could make it seem like the input was high, when in reality it is not there. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Experiment 2: Combinational logic gates and simplification
+Part 1:
+ 
+This is the circuit made:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The truth table, Boolean expression and the Boolean logic gate simplified:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Part 2: Making a XNOR out of NAND gates.
+The behaviour of the XNOR:
+XNOR truth table: 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+Part 3:
+1. Design a circuit to compare two 4-bit binary words (e.g., Word 1: 0110, Word 2:
+1010).
+2. Use XNOR gates to compare each pair of corresponding bits from the two binary
+words.
+3. Combine the outputs of the XNOR gates using an AND gate to produce a single
+signal indicating if the two words are equal.
+4. Test the circuit with various 4-bit inputs to confirm its accuracy
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Using 4 XNOR gates with 2 inputs going to each one: A, A1 and so on, this created 4 outputs which went into two and gates. After the two and gates, the two outputs went into an AND, simulating that all inputs have to be  true or false (XNOR) to get the input high. However, if one paired letter like A and A1 were not matched in the same switched position, the output would always be low.
+I came across a limitation, as I didn’t gave a 4 way AND, as this would have made the circuit simpler and clearer.
+
+
+
+
+
+	
+
+Experiment 3:
+Consider a robot control system operating three relays, A, B, and C, which are used to
+start a motor. The motor will only start when one of the following conditions occurs:
+• A only is operated.
+• B only is operated.
+• A & C are operated together.
+• B & C are operated together.
+• Any other sequence must not operate the motor.
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Modified Circuit: Using E as an enable
+
+
+ 
+Modiefied using E as an enable going to the and:
